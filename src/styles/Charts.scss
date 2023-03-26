@@ -1,0 +1,120 @@
+.chart-container {
+  margin-top: 30px;
+  position: relative;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.chart-container::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #2ecc71;
+  animation: pulse 1s ease-in-out infinite;
+}
+
+.chart-container:nth-child(2) {
+  margin-top: 200px;
+}
+
+.recharts-wrapper {
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+}
+
+.recharts-cartesian-axis-tick-value {
+  font-size: 12px;
+  fill: #666;
+}
+
+.recharts-tooltip-label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #666;
+}
+
+.recharts-tooltip-item-name {
+  font-size: 12px;
+  font-weight: bold;
+  color: #666;
+}
+
+.recharts-tooltip-item-value {
+  font-size: 12px;
+  color: #999;
+}
+
+.recharts-cartesian-grid {
+  stroke: #f0f0f0;
+}
+
+.recharts-legend {
+  font-size: 12px;
+  color: #666;
+}
+
+.recharts-legend-item {
+  cursor: pointer;
+}
+
+.recharts-legend-item-text {
+  font-weight: normal;
+}
+
+.recharts-legend-item-active {
+  color: #2ecc71;
+}
+
+.chart-container h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+  margin-bottom: 10px;
+  color: #2ecc71;
+}
+
+@media (max-width: 767px) {
+  .chart-container {
+    margin-top: 20px;
+  }
+
+  .recharts-cartesian-axis-tick-value {
+    font-size: 10px;
+  }
+
+  .recharts-tooltip-label {
+    font-size: 12px;
+  }
+
+  .recharts-tooltip-item-name {
+    font-size: 10px;
+  }
+
+  .recharts-tooltip-item-value {
+    font-size: 10px;
+  }
+
+  .recharts-legend {
+    font-size: 10px;
+  }
+
+  .chart-container h3 {
+    font-size: 20px;
+  }
+}
+
+canvas {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+}
+

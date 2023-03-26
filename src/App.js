@@ -14,6 +14,7 @@ import './styles/Team.scss';
 import './styles/Project.scss';
 import './styles/Company.scss';
 import './styles/Header.scss';
+import './styles/Charts.scss';
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);

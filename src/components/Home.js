@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Company from './Company';
 import Projects from './Projects';
 import Contact from './Contact';
+import Charts from './Charts';
 import Team from './Team';
 import { Link as ScrollLink } from 'react-scroll';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -53,7 +54,7 @@ function Home() {
                 </div>
             </ScrollLink>
         </div>
-      </section><Company /><Projects /><Team /><Contact /></>
+      </section><Company /><Charts/><Projects /><Team /><Contact /></>
   );
 }
 
