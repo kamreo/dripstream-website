@@ -1,0 +1,78 @@
+.home {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  
+    .container {
+      text-align: center;
+      position: relative;
+      z-index: 1;
+  
+      h1 {
+        font-size: 4rem;
+        color: white;
+      }
+  
+      p {
+        font-size: 1.5rem;
+        color: white;
+        margin-bottom: 2rem;
+      }
+  
+      .learn-more {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        color: white;
+        cursor: pointer;
+        transition: all 0.3s ease;
+  
+        span {
+          margin-right: 1rem;
+        }
+  
+        i {
+          margin-left: 1rem;
+          transition: all 0.3s ease;
+        }
+  
+        &:hover {
+          transform: translateY(-10px);
+  
+          i {
+            transform: translateY(10px);
+          }
+        }
+      }
+    }
+  
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 0;
+    }
+  
+    &.dark {
+      &:before {
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+  
+      .container {
+        h1,
+        p,
+        .learn-more {
+          color: white;
+        }
+      }
+    }
+  }
