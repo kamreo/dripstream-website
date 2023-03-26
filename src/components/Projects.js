@@ -13,7 +13,7 @@ function Projects() {
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
-            <a className="project-link" href="#" target="_blank" >View project</a>
+            <a className="project-link" href="/" target="_blank" >View project</a>
           </div>
         </div>
       </div>
