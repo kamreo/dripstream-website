@@ -17,7 +17,9 @@ function Team() {
         <div className="row">
           <div className="col-md-6">
             <div className="member">
-              <img src={kamil} alt="team member" />
+              <div className="circular">
+                <img src={kamil} alt="team member" />
+              </div>
               <div className="member-details">
                 <h3>Kamil Jonak</h3>
                 <p>.NET Developer</p>
@@ -28,7 +30,9 @@ function Team() {
               </div>
             </div>
             <div className="member">
-              <img src={ryglos} alt="team member" />
+              <div className="circular">
+                <img src={ryglos} alt="team member" />
+              </div>
               <div className="member-details">
                 <h3>Adam Rygiel</h3>
                 <p>SQL Specialist</p>
@@ -41,7 +45,9 @@ function Team() {
           </div>
           <div className="col-md-6">
             <div className="member">
-              <img src={maks} alt="team member" />
+            <div className="circular">
+                <img src={maks} alt="team member" />
+              </div>
               <div className="member-details">
                 <h3>Maks Sudoł</h3>
                 <p>.NET Developer</p>
@@ -52,7 +58,9 @@ function Team() {
               </div>
             </div>
             <div className="member">
-              <img src={putek} alt="team member" />
+            <div className="circular">
+                <img src={putek} alt="team member" />
+              </div>
               <div className="member-details">
                 <h3>Piotr Puto</h3>
                 <p>.NET developer</p>
@@ -67,7 +75,9 @@ function Team() {
     <div className="row">
       <div className="col-md-6">
         <div className="member">
-          <img src={smith} alt="team member" />
+        <div className="circular">
+                <img src={smith} alt="team member" />
+              </div>
           <div className="member-details">
             <h3>Mateusz Kowalczyk</h3>
             <p>React developer</p>
@@ -78,7 +88,9 @@ function Team() {
           </div>
         </div>
         <div className="member">
-          <img src={domi} alt="team member" />
+            <div className="circular">
+                <img src={domi} alt="team member" />
+              </div>
           <div className="member-details">
             <h3>Dominik Pieczonko</h3>
             <p>Marketing specialist</p>
@@ -91,7 +103,9 @@ function Team() {
       </div>
       <div className="col-md-6">
         <div className="member">
-          <img src={tymek} alt="team member" />
+              <div className="circular">
+                <img src={tymek} alt="team member" />
+              </div>
           <div className="member-details">
             <h3>Tymoteusz Kossek</h3>
             <p>React developer</p>

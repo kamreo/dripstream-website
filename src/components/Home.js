@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Company from './Company';
 import Projects from './Projects';
 import Contact from './Contact';
@@ -6,8 +6,27 @@ import Team from './Team';
 import { Link as ScrollLink } from 'react-scroll';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
-import videoBackground from '../assets/videos/background.mp4'; // Import the video file
+import backgroundImage from '../assets/images/background.jpg';
 
+function TypingText({ text }) {
+  const [visibleText, setVisibleText] = useState('');
+  
+  useEffect(() => {
+    let i = 0;
+    const intervalId = setInterval(() => {
+      setVisibleText(text.slice(0, i));
+      i++;
+      if (i > text.length) {
+        clearInterval(intervalId);
+      }
+    }, 100);
+    return () => clearInterval(intervalId);
+  }, [text]);
+
+  return (
+    <h1>{visibleText}</h1>
+  );
+}
 
 function Home() {
   return (
@@ -15,23 +34,15 @@ function Home() {
         className="home" 
         id="home" 
         style={{
-            position: 'relative', // Add position: relative to make the video cover the entire section
-            height: '100vh',
-        }}>
-            <video
-          src={videoBackground} // Add the video file as the source of the video
-          autoPlay // Add the autoplay attribute to automatically play the video
-          muted // Add the muted attribute to mute the video by default
-          loop // Add the loop attribute to make the video loop continuously
-          style={{
-            position: 'absolute', // Add position: absolute to cover the entire section
-            width: '100%',
-            height: '100%',
-            objectFit: 'cover', // Add object-fit: cover to make the video cover the entire section
-          }}
-        />
+          position: 'relative', 
+          height: '100vh',
+          backgroundImage: `url(${backgroundImage})`, // Use the image as the background
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+        >
         <div className="container">
-            <h1>Welcome to DripStream</h1>
+            <TypingText text="Welcome to DripStream" />
             <p>We're a software house dedicated to creating innovative solutions that help businesses succeed. 
                 Our team of expert developers, designers, and project managers work together to deliver high-quality 
                 products that meet your needs and exceed your expectations.
